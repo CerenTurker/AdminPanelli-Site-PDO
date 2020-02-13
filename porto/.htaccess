@@ -1,0 +1,36 @@
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} ^siteadı.com [NC]
+#RewriteRule ^(.*)$ http://www.siteadı.com/$1 [L,R=301,NC]
+
+
+
+
+RewriteRule ^bize_ulasin$ iletisim.php [NC,L]
+RewriteRule ^haberlerimiz$ haberler.php [NC,L]
+RewriteRule ^biz_kimiz$ hakkimizda.php [NC,L]
+RewriteRule ^haber([0-9a-zA-Z-_]+)-([0-9]+)$ haber-detay.php?sef=$1&icerik_id=$2 [L,QSA]
+RewriteRule ^sayfa([0-9a-zA-Z-_]+)-([0-9]+)$ menu-detay.php?sef=$1&menu_id=$2 [L,QSA]
+
+
+
+RewriteRule ^altsayfa([0-9a-zA-Z-_]+)-([0-9]+)$ menu-detay.php?sef=$1&menu_id=$2 [L,QSA]
+
+
+
+RewriteRule ^haberler(.*)$ haberler.php?sef=$1&icerik_id=$2 [L,QSA]
+
+ RewriteRule ^arama(.*)$ arama.php?sef=$1&aranan=$2&sayfa=$3 [L,QSA]
+
+
+ 
+#RewriteRule ^urunler/([0-9a-zA-Z-_]+)/([0-9]+)$  urunler.php?sef=$1&urun_id=$2 [L,QSA]
+#RewriteRule ^kategoriler/([0-9a-zA-Z-_]+)  kategoriler.php?sef=$1 [L,QSA]
+#RewriteRule ^urun-detay/([0-9a-zA-Z-_]+)/([0-9]+)$  urun-detay.php?sef=$1&urun_id=$2 [L,QSA]
+
+
+
+
+
+
+
